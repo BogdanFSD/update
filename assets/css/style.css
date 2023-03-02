@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
+*{
+    box-sizing: border-box;
+    
+  }
+  
+  
+body {
+    height: 100vh;
+    width: 100vw;
+    background: url("../images/background.webp") no-repeat center center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .container {
+    position: absolute;
+    width: 300px;
+    height: 360px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../images/card.webp") center center;
+    background-size: cover;
+    color: white;
+    
+  }
+
+  .styling{
+    box-shadow: 3.6px 7.2px 7.2px hsl(0deg 0% 0% / 39%);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .btn-flex {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    
+    border: 1px solid ;
+    background-color: #565851;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content:center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .btn:hover {
+    background: grey;
+  }
+  
+  .btn.correct {
+    background-color: #0ca635;
+    
+  }
+  
+  .btn.wrong {
+    background-color: #562c2d;
+  }
+  
+  .start-btn, .next-btn, .end-btn, .finish-btn, .newgame-btn, .btn-play {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: beige;
+    border: 0.25rem solid grey;
+    border-radius: 15px;
+    padding: 0 1rem;
+  }
+  
+  .btn-playy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#newgame-btn{
+  position: relative;
+  top: 10em;
+}
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8rem;
+  }
+  
+  .hide {
+    display: none;
+  }
+  .rules-container > p{
+    display: flex;
+    justify-content:flex-start ;
+    font-size: 1.5rem;
+    margin-left: 0.5em;
+    
+  }
+  .rules-container > h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0.5em;
+  }
+
+  .gamerulesbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8rem;
+  }
+
+.conntainer  {
+  width: 90vw;
+    height: 39vh;
+    color: white;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../images/card.webp) center center;
+    background-size: cover;
+}
+
+  
+
+  #question{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5em;
+  }
+
+  
+
+  .Congrats{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+   h2{
+    letter-spacing: 1px;
+    font-size: 2rem;
+    
+    
+  }
+
+   .Congrats > p {
+    font-size: 2rem;
+    font-weight: bold;
+    
+  }
+
+  .newgame{
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+  }
+  
+  #main_footer {
+    position: absolute;
+    bottom: 1.5em;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #main_footer>div>a {
+    font-size: 160%;
+    margin: 3%;
+    
+  }
+  
+  #main_footer>div>a>i {
+    color: white;
+  }
+  
+  @media screen and (min-width:1440px){
+    .rules-container > p{
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width:1440px) {
+    .conntainer {
+      width: 90vh;
+        height: 53vh;
+        color: white;
+        transition: all 0.3s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../images/card.webp) center center;
+        background-size: cover;
+    }
+   
+    }
+  
+
+  @media screen and (max-width:1028px){
+    .conntainer {
+      width: 90vw;
+        height: 51vh;
+        color: white;
+        transition: all 0.3s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../images/card.webp) center center;
+        background-size: cover;
+    }
+  }
+  
+
+  @media screen and (max-width:720px) {
+    .conntainer {
+      width: 90%;
+        height: 50%;
+        color: white;
+        transition: all 0.3s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../images/card.webp) center center;
+        background-size: cover;
+    }
+  }
+  
+   
+ 
+ 
+@media screen and (max-width:510px) {
+.Congrats{
+    width: 100%;
+  }
+
+.Congrats > h2{
+    letter-spacing: 1px;
+    font-size: 2rem;
+    width: 50px;
+    display: contents;
+  }
+
+
+.conntainer {
+  width: 100%;
+    height: 59%;
+    color: white;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../images/card.webp) center center;
+    background-size: cover;
+}
+}

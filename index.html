@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Book Worm QUIZ">
+    <meta name="keywords" content="books, quiz, book worm, ">
+    <link href="assets/css/style.css" rel="stylesheet">
+  <title>Book Worm </title>
+</head>
+<body>
+  <div class="container styling">
+    <h1>Book Worm Quiz</h1>
+    <div class="controls inner">
+        <button id="start-btn" class="start-btn btn">Start</button>
+      </div>
+  </div>
+
+  <div  class="question-container conntainer hide">
+    <div class="timer">
+      <div class="time-passed">Time Passed: </div>
+      <div class="timer-sec">00:00:00</div>
+    </div>
+    <div id="question"></div>
+    <div id="answer-buttons" class="btn-flex">
+      <button class="btn " id="style">Answer 1</button>
+      <button class="btn  " >Answer 2</button>
+      <button class="btn  " >Answer 3</button>
+      <button class="btn  " >Answer 4</button>
+    </div>
+    <div class="controls outer">
+        <button id="end-btn" class="end-btn btn hide">End</button>
+        <button id="next-btn" class="next-btn btn ">Next</button>
+        
+      </div>
+  </div>
+  
+<div id="Gamerules"  class="rules-container conntainer hide">
+  <h2>RULES</h2>
+        <p>1.Your answers are irreversible</p>
+        <p>2.There is no way out once you click start</p>
+        <p>3.You can not skip questions</p>
+        <p>4.You will see correct answer immediatly</p>
+        <div class="btn-playy ">
+          <button class="btn-play btn" id="btn-play" >Play</button>
+      </div>
+</div>
+
+<div class="endContainer conntainer hide ">
+    <div class="Congrats">
+       <h2> You finished the quiz</h2>
+       <p>Well done!</p>
+     </div>
+        <div id="newgame" class="newgame">
+            <button id="newgame-btn" class="newgame-btn btn styl">NewGame</button>
+        </div>
+  </div>
+  
+  <footer id="main_footer">
+    <h2>&copy; Book Worm <script>document.write(new Date().getFullYear())</script></h2>
+    <div class="center">
+        <a href="https://facebook.com" target="blank" rel="noopener"
+            aria-label="Visit our Facebook page (opens in new tab)"><i class="fa-brands fa-facebook-square"></i></a>
+
+        <a href="https://twitter.com" target="blank" rel="noopener"
+            aria-label="Visit our Twitter page (opens in new tab)"><i class="fa-brands fa-twitter"></i></a>
+
+        <a href="https://instagram.com" target="blank" rel="noopener"
+            aria-label="Visit our Instagram page (opens in new tab)"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+</footer>
+
+  <script src="https://kit.fontawesome.com/e55919ad1f.js" crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
+  
+</body>
+</html>
