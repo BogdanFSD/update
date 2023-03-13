@@ -175,6 +175,23 @@ body {
     justify-content: center;
     margin-top: 4em;
   }
+
+  .timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .time-passed {
+    
+    font-size: 2em;
+  }
+  
+  .timer-sec {
+    font-weight: bold;
+    font-size: 2em;
+  }
+  
   
   #main_footer {
     position: absolute;

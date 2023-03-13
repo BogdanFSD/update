@@ -19,15 +19,13 @@ const endContainer = document.querySelector('.endContainer');
 const newgame = document.querySelector(".newgame-btn");
 
 let quizStartTime = 0;
-let time = 5;
+let time = 20;
 let countdown;
 let mixedQuestion;
 let questionIndex = 0;
 let score = 0;
 
 start.addEventListener('click', gameRules);
-
-
 
 play.addEventListener('click',() => {
  startTimer();
@@ -47,17 +45,13 @@ newgame.addEventListener('click', () => {
   startGame();
 });
 
-// function resetTimer() {
-//   int = setInterval(startTimer, 1000);
-// }
-
 function gameRules (){
   gamerules.classList.remove('hide');
 };
 
 function startGame (){
   quizStartTime = new Date();
-  time = 5;
+  time = 20;
   timer.innerHTML = time;
   end.classList.add('hide')
   questionContainer.classList.remove('hide');
@@ -84,7 +78,7 @@ function showQuestion() {
     button.addEventListener('click', selectAnswer);
     answerBtn.appendChild(button);
   });
-  time = 5;
+  time = 20;
   timer.innerHTML = time;
   startTimer();
 }
@@ -220,48 +214,48 @@ const questions = [
         ]
       },
       {
-        question: 'Who is the evil in Harry Potter?',
+        question: 'Who wrote Frankenstein?',
         answers: [
-          { text: 'Voldemort', correct: true },
-          { text: 'Severus Snape', correct: false },
-          { text: 'Dobby', correct: false },
-          { text: 'Gandalf', correct: false }
+          { text: 'Mary Shelley', correct: true },
+          { text: 'Danielle Steel', correct: false },
+          { text: 'J. K. Rowling', correct: false },
+          { text: 'Osamu Tezuka', correct: false }
         ]
       },
       {
-        question: 'What happened with Don Quixote?',
+        question: 'What wrote Homage to Catalonia?',
         answers: [
-          { text: 'Miguel de Cervantes', correct: true },
-          { text: 'Mark Twain ', correct: false },
+          { text: 'George Orwell', correct: true },
+          { text: 'Irving Wallace ', correct: false },
           { text: 'Cillian Murphy', correct: false },
           { text: 'Sancho Panza', correct: false }
         ]
       },
       {
-        question: 'What character is Queequeg ?',
+        question: 'Who took pen name as Eric Arthur Blair?',
         answers: [
-          { text: 'Captain', correct: false },
-          { text: 'Cannibal ', correct: true },
-          { text: 'Moby Dick', correct: false },
-          { text: 'Pirat', correct: false }
+          { text: 'Mark Twain', correct: false },
+          { text: 'George Orwell ', correct: true },
+          { text: 'Stan Lee', correct: false },
+          { text: 'Dr. Seuss', correct: false }
         ]
       },
       {
-        question: 'Because of what Hamlet died?',
+        question: 'Name the first book in the Noughts and Crosses series?',
         answers: [
-          { text: 'Car accident', correct: false },
-          { text: 'Poison', correct: false },
-          { text: 'Rapier', correct: false },
-          { text: 'Poisoned rapier', correct: true }
+          { text: 'Noughts & Crosses', correct: false },
+          { text: 'Knife Edge', correct: false },
+          { text: 'Double Cross', correct: false },
+          { text: 'Black & White', correct: true }
         ]
       },
       {
-          question: 'What is the second Harry Potter book called?',
+          question: 'What was the name of Charles Dickens last book which was left unfinished?',
           answers: [
-            { text: 'Jane Eyre', correct: false },
+            { text: 'The Old Man of Lochnagar', correct: false },
             { text: 'Oliver Twist', correct: false },
-            { text: 'Dragon', correct: false },
-            { text: 'Harry Potter & The Chamber of Secrets', correct: true }
+            { text: 'Charlotte, Emily and Anne Bronte', correct: false },
+            { text: 'The Mystery Of Edwin Drood', correct: true }
           ]
         }
   ];
