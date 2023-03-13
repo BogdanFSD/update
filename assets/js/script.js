@@ -18,8 +18,8 @@ const end = document.querySelector(".end-btn");
 const endContainer = document.querySelector('.endContainer');
 const newgame = document.querySelector(".newgame-btn");
 
-let time = 60;
-let int = 0
+let quizStartTime = 0;
+let time = 5;
 let countdown;
 let mixedQuestion;
 let questionIndex = 0;
@@ -56,7 +56,8 @@ function gameRules (){
 };
 
 function startGame (){
-  time = 60;
+  quizStartTime = new Date();
+  time = 5;
   timer.innerHTML = time;
   end.classList.add('hide')
   questionContainer.classList.remove('hide');
@@ -83,11 +84,15 @@ function showQuestion() {
     button.addEventListener('click', selectAnswer);
     answerBtn.appendChild(button);
   });
+  time = 5;
+  timer.innerHTML = time;
+  startTimer();
 }
 
 function setNextQuestion() {
   resetState();
   if (questionIndex < mixedQuestion.length) {
+    
     showQuestion();
   } else {
     endQuiz();
@@ -136,20 +141,24 @@ function clearStatusClass(element) {
 
 function endQuiz() {
   clearInterval(countdown); // stop the timer
-  const elapsedTime = 60 - time; // calculate the time elapsed
+  const quizEndTime = new Date();
+  const elapsedTime = (quizEndTime - quizStartTime) / 1000 - 2;
+
   questionContainer.classList.add('hide');
-  document.getElementById("presult").innerHTML = `Your Score: ${score} / ${mixedQuestion.length}<br>You spent: ${elapsedTime} seconds to solve this quiz.<br> Can you make better?`;
+  document.getElementById("presult").innerHTML = `Your Score: ${score} / ${mixedQuestion.length}<br>You spent: ${elapsedTime.toFixed(1)} seconds to solve this quiz.<br> Can you make better?`;
   endContainer.classList.remove('hide');
 };
 
 function startTimer() {
+  clearInterval(countdown);
   countdown = setInterval(function() {
     if (time > 0) {
       time--;
       timer.innerHTML = time;
-    } else {
-      
-      endQuiz();
+    }  else  {
+      clearInterval(countdown);
+      questionIndex++;
+      setNextQuestion();
     }
   }, 1000);
 }
